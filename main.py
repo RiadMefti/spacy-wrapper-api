@@ -28,6 +28,7 @@ async def tokenize(text: str):
                 "tag": token.tag_,
                 "dep": token.dep_,
                 "head": token.head.text,
+                "head_morf": token.head.morph.to_dict(),
                 "is_stop": token.is_stop,
                 "is_alpha": token.is_alpha,
                 "is_ascii": token.is_ascii,
