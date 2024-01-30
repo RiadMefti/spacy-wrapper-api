@@ -16,7 +16,7 @@ async def visualize_dep(text: str):
 
 
 
-@app.post("/tokenize")
+@app.get("/tokenize")
 async def tokenize(text: str):
     doc = nlp(text) 
     return {
@@ -24,7 +24,7 @@ async def tokenize(text: str):
             {
                 "text": token.text,
                 "lemma": token.lemma_,
-                "pos": token.pos_,
+                  "pos": token.pos_,
                 "tag": token.tag_,
                 "dep": token.dep_,
                 "head": token.head.text,
